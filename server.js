@@ -27,6 +27,9 @@ app.get('/comments', async (req, res) => {
 app.use('/articles', articleRouter)
 app.use('/comments', commentRouter)
 
-app.listen(port ,function(){
-  console.log("server is running");
-});
+app.listen(process.env.PORT || 5000, (err) => {
+  if (err) {
+   return console.error('server could not start')
+  }
+  console.log('server is running')
+ })
