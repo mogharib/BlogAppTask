@@ -27,4 +27,6 @@ app.get('/comments', async (req, res) => {
 app.use('/articles', articleRouter)
 app.use('/comments', commentRouter)
 
-app.listen(3000);
+app.listen(port ,function(){
+  console.log("server is running");
+});
