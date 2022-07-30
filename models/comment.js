@@ -1,5 +1,5 @@
 const mongoose = require('mongoose')
-const marked = require('marked')
+const { marked } = require('marked');
 const slugify = require('slugify')
 const createDomPurify = require('dompurify')
 const { JSDOM } = require('jsdom')
@@ -10,10 +10,8 @@ const commentSchema = new mongoose.Schema({
     type: String,
     required: true
   },
-  postId: {
-    type: String,
-    required: true
-  },
+ 
+  
   description: {
     type: String
   },

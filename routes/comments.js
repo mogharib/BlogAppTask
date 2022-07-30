@@ -38,7 +38,7 @@ function saveCommentAndRedirect(path) {
     console.log(Comment);
     Comment.username = req.body.username
     Comment.description = req.body.description
-    Comment.postId = req.body.postId
+    
    
     try {
         Comment = await Comment.save()
